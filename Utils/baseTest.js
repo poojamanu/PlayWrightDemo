@@ -20,6 +20,8 @@ exports.customLocators = test.extend({
             await commonLocators.loginButton.click()
         }
          await use(login)
+
+         
     }
 
 })
