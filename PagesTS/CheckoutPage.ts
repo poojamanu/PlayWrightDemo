@@ -1,0 +1,45 @@
+import {expect, Locator, Page} from "@playwright/test";
+export class CheckoutPage {
+page:Page
+firstName:Locator
+lastName:Locator
+zip:Locator
+continue:Locator
+finishButton:Locator
+orderCompletionMsg:Locator
+
+    constructor(page:Page) {
+        this.page = page
+        this.firstName = page.getByPlaceholder("First Name")
+
+        this.lastName = page.getByPlaceholder("Last Name")
+
+        this.zip = page.locator("#postal-code")
+
+        this.continue = page.locator("#continue")
+        this.finishButton= page.locator("#finish")
+        this.orderCompletionMsg = page.getByRole("heading", { name: "Thank you for your order!" })
+    }
+
+    async submitUserDetails(fname:string,lname:string,zip:any) {
+        await this.firstName.fill(fname)
+        await this.lastName.fill(lname)
+        await this.zip.fill(zip)
+        await this.continue.click()
+    }
+    async clickFinish(){
+        await this.finishButton.click()
+    }
+     
+  //verify thank you message
+  async verifyOrderCompletion(){
+    await expect(this.orderCompletionMsg).toBeVisible()
+
+  }
+
+  async completeOrder(fname:string,lname:string,zip:any){
+    await this.submitUserDetails(fname,lname,zip)
+    await this.clickFinish()
+    await this.verifyOrderCompletion()
+  }
+}

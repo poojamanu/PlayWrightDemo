@@ -1,0 +1,22 @@
+[{ "username":"standard_user",
+  "pwd" : "secret_sauce", 
+  "fname" : "ann",
+   "lname" : "mary",
+   "zip" : "3455",
+   "myProduct" : "Sauce Labs Fleece Jacket"
+},
+{ "username":"standard_user",
+  "pwd" : "secret_sauce", 
+  "fname" : "Alex",
+   "lname" : "phil",
+   "zip" : "8983",
+   "myProduct" : "Sauce Labs Onesie"
+},
+{ "username":"standard_user",
+  "pwd" : "secret_sauce", 
+  "fname" : "manu",
+   "lname" : "philip",
+   "zip" : "65885",
+   "myProduct" : "Sauce Labs Backpack"
+}
+]
