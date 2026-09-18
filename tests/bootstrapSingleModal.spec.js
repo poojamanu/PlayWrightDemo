@@ -1,4 +1,4 @@
-import test from "@playwright/test";
+import {test} from "@playwright/test";
 
 test("Modal test",async({page})=>{
     await page.goto("https://selenium.qabible.in/index.php")
