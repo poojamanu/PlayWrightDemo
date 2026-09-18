@@ -30,4 +30,4 @@ right click- locator.click({button:"right"})*/
 /* move hover
 locator.hover() */
 
-test("checkbox ")
+//test("checkbox ")
