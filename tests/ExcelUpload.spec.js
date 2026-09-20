@@ -5,7 +5,7 @@ test("excelUpload",async({page})=>{
     await browseButton.setInputFiles("C:\\Users\\manua\\development\\Projects\\PlayWrightProject\\Utils\\PlaywrightDemoExcel.xlsx")
 })
 
-test.only("fileDownload",async({page})=>{
+test("fileDownload",async({page})=>{
     await page.goto("https://demoqa.com/upload-download")
     const downloadButton=page.locator("#downloadButton")
     const downloadPromise=page.waitForEvent("download") // tells to wait for browser to satrt a downlaod
