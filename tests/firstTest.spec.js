@@ -1,6 +1,6 @@
 import test from "@playwright/test";
 
-test("demo test",async({browser})=>{
+test("@login demo test",async({browser})=>{
     //browser fixture
     const context=await browser.newContext()
     const page=await context.newPage()

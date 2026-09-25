@@ -6,7 +6,7 @@
 
 import test from "@playwright/test";
 
-test("invalid password",async({page})=>{
+test("@login invalid password",async({page})=>{
     await page.goto("https://www.saucedemo.com")
     const Username=page.getByPlaceholder("Username")
     await Username.fill("standard_user")

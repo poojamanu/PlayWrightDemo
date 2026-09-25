@@ -20,7 +20,7 @@ test.fixme("Bug test",async({page})=>{
 
 test("slow test",async({page})=>{
     test.slow()
-    console.log("execution slowed triple times")
+    console.log("increased timeout 3 times")
 })
 
 test.afterEach("after each test",async({page})=>{
