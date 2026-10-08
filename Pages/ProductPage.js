@@ -16,6 +16,7 @@ export class ProductPage {
 
 
         const allProducts = await this.allProductsLocator.allTextContents()
+        
         const productCount = await this.allProductsLocator.count()
 
         for (let i = 0; i < productCount; i++) {
