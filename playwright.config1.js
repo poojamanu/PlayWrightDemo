@@ -62,7 +62,7 @@ export default defineConfig({
         //to handle permissions location,audio,video,micrphone etc
         permissions:['geolocation','camera','microphone'],
         /*geolocation:{
-          latitude:9.2.29,
+          latitude:9.2.29
           longitude:8.23.56
 
         }*/

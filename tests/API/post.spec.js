@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test"
-
+//https://restful-booker.herokuapp.com/apidoc/index.html?utm_source=chatgpt.com#api-Booking-CreateBooking
 test('post_api', async ({ request }) => {
     const authData =
     {
@@ -15,7 +15,7 @@ test('post_api', async ({ request }) => {
 })
 
 
-//toc reate booking
+//to create booking
 
 test("create_booking", async ({ request }) => {
     const bookingData =
@@ -31,11 +31,11 @@ test("create_booking", async ({ request }) => {
         "additionalneeds": "Breakfast"
     }
 
-    const response = await request.post("https://restful-booker.herokuapp.com/booking",{ headers: { 'Content-Type': 'application/json' }, data: bookingData })
+    const response = await request.post("https://restful-booker.herokuapp.com/booking", { headers: { 'Content-Type': 'application/json' }, data: bookingData })
     console.log(response.status())
     const responseJson = await response.json()
     console.log(responseJson)
     expect(responseJson.bookingid).not.toBeNull()
-    console.log("booking id is:"+responseJson.bookingid)
+    console.log("booking id is:" + responseJson.bookingid)
     expect(responseJson.booking.firstname).toBe(bookingData.firstname)
 })

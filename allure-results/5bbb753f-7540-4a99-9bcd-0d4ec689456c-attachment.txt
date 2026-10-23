@@ -1,0 +1,15 @@
+200
+{ token: 'bb83a18a18c7b5f' }
+200
+{
+  bookingid: 2836,
+  booking: {
+    firstname: 'Jim',
+    lastname: 'Brown',
+    totalprice: 111,
+    depositpaid: true,
+    bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+    additionalneeds: 'Breakfast'
+  }
+}
+booking id is:2836

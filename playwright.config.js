@@ -26,10 +26,10 @@ export default defineConfig({
   fullyParallel: true,
   /* Reporter to use */
 
-  //reporter: 'html',
-  reporter:[
+  reporter: 'html',
+ /* reporter:[
     ["allure-playwright"]
-  ],
+  ],*/
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
 
@@ -44,7 +44,11 @@ export default defineConfig({
 
         /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
         trace: 'retain-on-failure',
-        browserName:'chromium'
+        browserName:'chromium',
+        ignoreHTTPSErrors:true, //ssl certificate handling
+        permissions:["geolocation","notifications","camera","microphone"],
+        //geolocation:{latitude:1233.4345,longitude:979834.99},
+        viewport:{width:500,height:500}
 
 
       },

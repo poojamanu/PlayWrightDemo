@@ -3,7 +3,7 @@ import {customTest} from "../Utils/customData.js"
 import {mytest} from "../Utils/sampleCustom.js"
 import {customLocators} from "../Utils/baseTest.js"
 test.skip("DemoProject",async({page})=>{
-    await page.goto("https://www.saucedemo.com")
+    await page.goto("https://www.saucedemo.com",{waitUntil:'networkidle'})
     
     const Username=page.getByPlaceholder("Username")
     await Username.fill("standard_user")
